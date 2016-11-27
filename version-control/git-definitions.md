@@ -10,3 +10,4 @@
 	A commit acts as a savepoint, or snapshot of a project. A good commit message details what and how something has been changed in succinct language. 
 * What is a merge conflict?
 	when two seperate branches have changed the same part of a file and then are merged together. 
+	Hello Glenna!
