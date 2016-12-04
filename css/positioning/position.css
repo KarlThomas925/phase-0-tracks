@@ -1,0 +1,18 @@
+.octo {
+	position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }  
+.hat {
+	position: absolute;
+	top:50%;
+	left:50%; 
+	transform: translate(-45%, -120%);
+}
+.gls {
+	position: absolute;
+	top:50%;
+	left:50%; 
+	transform: translate(-45%, -80%)
+}
