@@ -30,3 +30,53 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+body {
+  max-width: 960px;
+  background:;
+  
+}
+
+main {
+  width:78.75%;
+  display:inline-block;
+  vertical-align: text-top;
+  margin-left: 22%;
+
+}
+#external-links {
+  
+  width: 20.83333333%;
+  display:inline-block;
+  vertical-align: text-top;
+  position: fixed;
+  
+}
+/*@media screen and (max-width:500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+@media screen and (max-width:400px) {
+  body {
+    font-size: 50%;
+    
+  }
+}
+@media screen and (max-width:800px) {
+ #external-links {
+    background: #800080;
+    border:solid #FF0000;
+  }
+}
+@media screen and (max-width:700px) {
+ #external-links {
+    background: #00FFFF;
+    border: dashed #800080;
+  }
+}
+@media screen and (max-width:600px) {
+ #external-links {
+    background:#FF0000;
+    border:dotted solid double dashed #00FFFF;
+  }
+}
