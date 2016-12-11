@@ -1,0 +1,20 @@
+- Scan elevator for floor control panel
+	-Rectangular, has numbered buttons. 
+- Move robot front facing to the control panel.
+- While facing control panel
+	- scan numbers, locate X floors z/x coordinates.
+	- move arm to z/x. move button pushing arm forward, as to press the button. 
+- End, play elevator music. 
+
+-Getting ready in the morning
+-In Bedroom.
+	-Remove blankets
+	-Add clothes
+	-Move to bathroom
+-In Bathroom
+	-open drawer
+		-grab toothbrush, tooth paste
+		-merge toothbrush tooth paste 
+		-scrub teeth with brush
+		-spit
+-End
