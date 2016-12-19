@@ -1,3 +1,8 @@
+# Create desk hash, 
+# fill it with things on/in/apart of a desk
+# fill those things with things inside of those things, appropriately.
+# print navigation examples
+
 desk = {
 	"printer" => [
 		'ink',
