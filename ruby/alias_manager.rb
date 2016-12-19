@@ -6,8 +6,6 @@
  puts "What's your last name? "
  lname = gets.chomp
  
-
- 
  #make the names downcase so that there is no issue with making the mashedup name uppercase later.  
  fname = fname.downcase
  lname = lname.downcase
@@ -26,8 +24,6 @@
    str_new.join
  end
 
-
- 
  #the method below will switch a consonant to the next vowel in the array. 
  def next_consonant(str)
    consonants = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"]
@@ -45,6 +41,7 @@ end
  #because i am not dealing witht he index or ordser of the natural letter, but making my own. 
  
  #this method puts the name together, and makes the first letter upcase. 
+
  def theMixup (fname, lname)
    mix_firstname = next_vowel(fname)
    mix_firstname = next_consonant(mix_firstname)
@@ -59,8 +56,8 @@ end
    mix_firstname = mix_lastname
    mix_lastname = tmp
    return "#{mix_firstname} #{mix_lastname}"
-   
  end
+
  #this array is where all the names are held. 
  newMix = Array.new
  
@@ -68,7 +65,6 @@ end
  
  #this loop will continue to ask for names unless stopped. 
  while (fname != "")
-   
    puts "What is YOUR first name?(press 'Enter' to stop) "
    fname = gets.chomp
  
@@ -79,6 +75,7 @@ end
    lname = lname.upcase
    if fname == ""
      break
+
    end
    newMix.push("#{fname.capitalize} #{lname.capitalize} AKA #{theMixup(fname, lname)}")
  end
