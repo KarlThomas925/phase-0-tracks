@@ -50,3 +50,14 @@ end
 def printoutlist (list)
 	list.each { |item, quantity| puts "There is  #{quantity} count of #{item}" } 
 end
+# driver code for testing methods.
+# input(grocery_list,"Lemonade",2)
+# input(grocery_list,"Tomatoes",3)
+# input(grocery_list,"Onions",1)
+# input(grocery_list,"Ice Cream",4)
+
+# remove(grocery_list,"Lemonade")
+
+# update(grocery_list,"Ice Cream",1)
+
+# printout(grocery_list)
