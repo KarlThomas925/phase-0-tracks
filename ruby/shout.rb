@@ -1,4 +1,4 @@
- module Shout
+module Shout
 # 	# we'll put some methods here soon, but this code is fine for now!
 # 	def self.yell_angrily(words)
 #     	words + "!!!" + " :("
@@ -11,19 +11,17 @@
 		puts "IT MAKES ME WANNA PUT MY HANDS UP AND #{noise}"
 	end
  end
-class bear
-	include roar
+ 
+class Bear
+	include Shout
 end
 
-class lion
-	include roar
+class Lion
+	include Shout
 end
 
-theo = bear.new
+theo = Bear.new
 theo.roar("RAAOOOAOEUOAIUIAUOEIAEIAOU")
 
-paul = lion.new
+paul = Lion.new
 paul.roar("meow")
-
-
-
