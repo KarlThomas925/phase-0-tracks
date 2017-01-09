@@ -28,9 +28,9 @@ function Cars(make,model,color,speed) {
 	thecar.bark = function() { console.log("Woof!, 'Yeah sorry the car barks'"); };
 }
 
-var heyacar = new Cars("Volkswagon", "van", "red", 90)
+var heyacar = new Cars("Volkswagon", "van", "red", 90);
 
-var anothercar = new Cars("Jeep", "Wrangler", "yellow", 120)
+var anothercar = new Cars("Jeep", "Wrangler", "yellow", 120);
 
 
 
