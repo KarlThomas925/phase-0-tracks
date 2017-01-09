@@ -6,7 +6,7 @@ colors.push("purple, i guess");
 
 names.push("horse");
 
-var megazord = {name: "Karl", color "WOAH MAN LIKE THATS BLUE"};
+var megazord = {name: "Karl", color: "WOAH MAN LIKE THATS BLUE"};
 //Why megazord? because i'm tired and we're combining things
 
 for (x = 0; x < colors.length; x++)
@@ -18,14 +18,13 @@ for (x = 0; x < colors.length; x++)
 }
 
 function Cars(make,model,color,speed) {
-	console.log("Unveiling our new car:", thecar);
 
-	thecar.make = make;
-	thecar.model = model;
-	thecar.color = color;
-	thecar.speed = speed;
+	this.make = make;
+	this.model = model;
+	this.color = color;
+	this.speed = speed;
 
-	thecar.bark = function() { console.log("Woof!, 'Yeah sorry the car barks'"); };
+	console.log("Unveiling our new car:", this);
 }
 
 var heyacar = new Cars("Volkswagon", "van", "red", 90);
