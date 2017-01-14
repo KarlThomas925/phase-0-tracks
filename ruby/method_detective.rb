@@ -7,14 +7,14 @@
 "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
- "zom".insert(1, 'o')
+ "zom".insert(2, 'o')
 # => “zoom”
 
-"enhance".center(20)
+"enhance".center(15)
 # => "    enhance    "
 
-"Stop! You’re under arrest!".upcase
-# => "STOP! YOU’RE UNDER ARREST!"
+"Stop! You're under arrest!".swapcase 
+# => "STOP! YOU'RE UNDER ARREST!"
 
 "the usual".concat("suspects")
 #=> "the usual suspects"
