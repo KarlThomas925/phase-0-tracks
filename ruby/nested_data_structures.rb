@@ -32,7 +32,7 @@ Skateboard_types = {
 
 }
 
-puts Skateboard_types[:Skate][:Cutaway]
+puts Skateboard_types[:Skate][:Girl][:Cutaway]
 puts Skateboard_types[:Cruisers][:Arbor][:Size][0]
 
 p desk
