@@ -41,5 +41,23 @@ p bear_rank
 bear_rank.map {|rank, species| puts "#{rank} is #{species}"}
 p bear_rank
 
+#do the thing section
 
+#1
+a = [ 20,30,45,47,50]
+a.delete_if {|a| a < 46}
+puts a
+
+#2
+a = [ 20,30,45,47,50]
+a.keep_if {|a| a < 46}
+puts a
+
+#3
+b = [ 1, 2, 3, 4, 5, 0]
+puts b.reject {|b| b < 2 }
+
+#4
+b = [ 1, 2, 3, 4, 5, 0]
+puts b.drop_while {|b| b < 3 }
 
