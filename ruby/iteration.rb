@@ -4,43 +4,42 @@ def print_thing
 	yield("Hello","GoodBye")
 end
 
+
+
 print_thing { |thing1, thing2| "I guess it will say #{thing1} and #{thing2}" }
 
-heros = {
-	"superman" => "everything",
-	"deathpool" => "healing factor",
-	"thor" => "hammer",
-	"ironman" => "money",
-}
+#using .each and .map! on arrays and hashes
+bears = ["black", "kodiak", "polar", "panda"]
 
-villains = ["joker", "penguin", "clayface", "catwoman"]
+bear_rank = {1 => "black", 2 => "kodiak", 3 => 'polar', 4 => 'panda'}
 
-puts heros
-heros.each { |hero,power| puts "#{hero} uses #{power}"}
-puts heros
+p bears
+bears.each do |bear|
+	puts "WOAH LOOK AT THAT #{bear.upcase} BEAR"
+end
+p bears
 
-puts villains
-villains.each {|x| puts "Batman vanquished #{x}!!!?!"}
-puts villains
+p bears
+bears.map! do |bear|
+	bears = "brown"
+end
+p bears
 
-puts heros
-heros.map {|hero,power| puts "#{hero} uses #{power.upcase}"}
-puts heros
+puts "the best bear is #{bears} though."
 
-puts villains
-villains.map {|x| puts "Batman vanquished #{x.upcase.reverse}!!!?!" }
-puts villains
-villains.map! {|x| puts "Batman vanquished #{x.reverse}!!!?!"}
-puts villains
+puts "but if you wanted a ranking of lesser bears, it would be this:"
 
-a = [ 20,30,45,47,50]
-#a.delete_if {|a| a < 46}
-#puts a
+p bear_rank
+bear_rank.each do |rank, species|
+	puts "Rank #{rank}: #{species}"
+end
+p bear_rank
 
-#a.keep_if {|a| a < 46}
-#puts a
-b = [ 1, 2, 3, 4, 5, 0]
+puts "Another way to say it is"
 
-puts b.reject {|b| b < 2 }
+p bear_rank
+bear_rank.map {|rank, species| puts "#{rank} is #{species}"}
+p bear_rank
 
-#puts b.drop_while {|b| b < 3 }
+
+
