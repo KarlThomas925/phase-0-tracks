@@ -28,8 +28,8 @@ until loop_break
 
       #special arrays for special cases. 
       vowels = ["a", "e", "i", "o", "u"]
-      edgecases = ["z", "d", "h", "n", "t"]
-      edgesolution = ["b", "f", "j", "p", "v"]
+      edgecases = ["z", "d", "h", "n", "t", " "]
+      edgesolution = ["b", "f", "j", "p", "v", " "]
 
       #the meat of the method, 
       #mixing up and mapping the mixed up name to the results variable
@@ -48,7 +48,7 @@ until loop_break
       results.split.map(&:capitalize).join(' ')
     end
     puts "Your Super secret, totally untrackable spy name is #{Alias(input)}"
-    spy_names << Alias(name)
+    spy_names << Alias(input)
   end
   names = names.map!{|x| x.to_sym}
 
@@ -56,5 +56,6 @@ until loop_break
 end
 
 names_HASH.each do |input,results|
-  puts"#{input} is also known as #{results}
+  puts"#{input} is also known as #{results}"
+end
 
