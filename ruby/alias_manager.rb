@@ -65,10 +65,10 @@ end
  
  #this loop will continue to ask for names unless stopped. 
  while (fname != "")
-   puts "What is YOUR first name?(press 'Enter' to stop) "
+   puts "You, other person, What is YOUR first name?(press 'Enter' to stop, and if there are no other people) "
    fname = gets.chomp
  
-   puts "What's YOUR last name? "
+   puts "You, other person, What's YOUR last name?(press 'Enter' to stop, and if there are no other people)"
    lname = gets.chomp
  
    fname = fname.upcase
