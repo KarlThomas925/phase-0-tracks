@@ -11,7 +11,7 @@ client = Hash.new
  puts "What is yuour age? "
  client[:clientage] = gets.to_i 
  
- puts "How many children do you have?: "
+ puts "How many children do you have? "
  client[:clientchildnum] = gets.to_i
  
  puts "What style of decor do youprefer the most? "
