@@ -56,6 +56,6 @@ ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to sa
 
 #this will create 50 random santas
 50.times do
-  santaConSim << Santa.new(example_genders[rand(0..6)], example_ethnicities[rand(0..6)]) 
+  santas << Santa.new(genders[rand(0..6)], ethnicities[rand(0..6)]) 
 end
-p santaConSim
+p santas
