@@ -1,4 +1,9 @@
 require_relative 'game' #<access
 
+describe Game do 
+	let(:game) { Game.new }
 
-#My rspec will not download properly. i've been trying to fix it. 
+	it "takes user2's guess out of user1's word" do 
+		expect(game.hangman("a", "attack")).to eq false
+	end
+end
