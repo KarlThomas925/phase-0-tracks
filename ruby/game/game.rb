@@ -8,12 +8,12 @@
 
 class Game
 	 #I will need to access these throughout the code
-		attr_accessor :guesses, :loop_break?
+		attr_accessor :guesses, :loop_break
 
 	 #My plan is to use these attributes to run my loop
 		def initialize
 			@guesses = 0
-			@loop_break? = false
+			@loop_break = false
 		end
 
 		def hangman(guess, word)
@@ -29,10 +29,10 @@ class Game
 			end
 		#build the win/lose conditions. 
 		if word.length == 0
-			@loop_break? = true
+			@loop_break = true
 			puts "Congratulations, you have won, I am proud of you. Truly. Marverlous job."
 		elsif @guesses == word.length + 5
-			@loop_break? = true
+			@loop_break = true
 			puts "YOU ARE AN IG-NO-RAY-MOOSE"
 		else
 			false
@@ -40,11 +40,16 @@ class Game
 	end
 end
 			
+#Create the user interface. 
+game = Game.new
 
+puts "Now that's what I call Hangman!"
 
-if blank.include?("_") == false #no more blankies, no more.. losing
-	puts "You won, you operate at a higher function"
-else
-	puts"YOU ARE AN IG-NO-RAY-MOOSE"
+puts "Player One, feel free to enter a word for Player Two to guess:"
+word = gets.chomp
+
+while !game.loop_break
+	puts "Player Two, what's your guess?"
+	guess = gets.chomp
+	game.hangman(guess, word)
 end
-end #<class end
