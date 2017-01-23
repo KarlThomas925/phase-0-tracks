@@ -21,7 +21,7 @@ class Lion
 end
 
 theo = Bear.new
-theo.roar("RAAOOOAOEUOAIUIAUOEIAEIAOU")
+theo.roar("RAAOOAOEUOAIUIAUOEIAEIAOU")
 
 paul = Lion.new
 paul.roar("meow")
