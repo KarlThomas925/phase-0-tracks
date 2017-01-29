@@ -41,9 +41,10 @@ function RandoS(word_count) {
 	// returns the character at the specified index in a string.
 	for (var i = 0; i < word_count; i++){
 		
-		var words = ""; // create empty cariable to place randomized words into. 
-
-		for (var x = 0; x < (Math.floor(Math.random()* 10) + 1); x++) {
+		var words = ""; // create empty variable to place randomized words into. 
+		randomizer = (Math.floor(Math.random()* 10) + 1)
+		
+		for (var x = 0; x < randomizer; x++) {
 			words += possible.charAt(Math.floor(Math.random() * possible.length));
 		}
 		word_storage.push(words); // rando words going into the array. 
