@@ -115,3 +115,10 @@ end
 
 # Reflection Section
 #=======================================================================
+=begin
+Reflection Section
+Hash is shown encased in curly brackets, other hash is shown with arrow.
+Used to pair files with each other (within same folder). Different from require as we don't need full file path.
+Use a loop (.each, .times loop, for loops)
+Argument is not needed for virus_effects.
+=end
