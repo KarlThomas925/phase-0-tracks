@@ -4,11 +4,11 @@
 //return the result. 
 
 function reverses_word(s) {
-	var splitS = str.split("");
+	var splitS = s.split("");
 
 	var reverseS = splitS.reverse();
 
-	var joinS = reverseS.joinS("");
+	var joinS = reverseS.join("");
 
 	return joinS;
 }
