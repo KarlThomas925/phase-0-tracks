@@ -23,6 +23,7 @@ function Cars(make,model,color,speed) {
 	this.model = model;
 	this.color = color;
 	this.speed = speed;
+	this.engine = function(){console.log("RIMBLERAMBLE"}
 
 	console.log("Unveiling our new car:", this);
 }
@@ -30,6 +31,8 @@ function Cars(make,model,color,speed) {
 var heyacar = new Cars("Volkswagon", "van", "red", 90);
 
 var anothercar = new Cars("Jeep", "Wrangler", "yellow", 120);
+
+anothercar.engine();
 
 
 
