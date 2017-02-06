@@ -1,0 +1,26 @@
+***RELEASE 2***
+SELECT * FROM colors;
+1|black
+2|brown
+3|white
+4|mixed
+
+UPDATE bears SET name="extinct" WHERE species="Atlas Bear";
+
+SELECT * FROM bears, colors WHERE bears.color_id = colors.id;
+i do not know how to copy the output, and do not want to write it out. 
+
+SELECT bears.species, colors.color FROM bears JOIN colors ON bears.color_id = colors.id;
+Polar|white
+Atlas|brown
+Sun Bear|black
+Spectacled Bear|black
+Kodiak|brown
+Eurasian Bear|brown
+Glacier Bear|mixed
+Panda|mixed
+Red Panda|mixed
+
+DELETE FROM bears WHERE name="extinct";
+***END RELEASE 2***
+***RELEASE 3 ***
