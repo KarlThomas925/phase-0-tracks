@@ -8,13 +8,13 @@ require 'sqlite3'
 
 db = SQLite3::Database.new("ratings.db")
 
-create_table_cmd = <<-ratings
+create_table_cmd = <<-SQL
 	CREATE TABLE IF NOT EXISTS ratings(
 		id INTEGER PRIMARY KEY,
 		name VARCHAR(255),
-		stars INT,
+		stars INT
 		)
-ratings
+SQL
 
 db.execute(create_table_cmd)
 
@@ -30,3 +30,31 @@ def delete_rating(db, id)
 	db.execute("DELETE FROM ratings WHERE id=?", [id])
 end
 
+puts "Welcome to your Game review database."
+
+puts "What would you like to do with the database? Type: 'add', 'edit', or 'delete'..."
+action = gets.strip
+
+if(action == "add")
+	puts "What is the games name?"
+	name = gets.chomp
+	puts "And how many stars would you give this game?"
+	stars = gets.chomp
+	add_rating(db, name, stars)
+elsif(action == 'edit')
+	puts 'Input the ID # of the rating you would like to edit'
+	id = gets.chomp
+	puts 'What is the updated rating?'
+	new_rating = gets.chomp
+	edit_rating(db, new_rating,id)
+elsif(action == 'delete')
+	puts 'Input the ID # of the rating you would like to delete'
+	id = gets.chomp
+	delete_rating(db,id)
+else
+	puts "That was not avalid input"
+end
+
+
+# ratings = db.execute("SELECT * FROM ratings")
+# p ratings
