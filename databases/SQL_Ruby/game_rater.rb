@@ -6,6 +6,7 @@
 
 require 'sqlite3'
 
+# code to help create the database
 db = SQLite3::Database.new("ratings.db")
 
 create_table_cmd = <<-SQL
@@ -16,6 +17,28 @@ create_table_cmd = <<-SQL
 		)
 SQL
 
+#Strings to order the table by. 
+alphabetize_table_cmd1 = <<-SQL
+	SELECT * FROM ratings 
+	ORDER BY ratings.name, ratings.stars;
+SQL
+
+alphabetize_table_cmd2 = <<-SQL
+	SELECT * FROM ratings 
+	ORDER BY ratings.name ASC;
+SQL
+
+order_table_cmd1 = <<-SQL
+	SELECT * FROM ratings
+	ORDER BY ratings.stars DESC;
+SQL
+
+order_table_cmd2 = <<-SQL
+	SELECT * FROM ratings
+	ORDER BY ratings.stars ASC;
+SQL
+
+#creating the database and methods to change it
 db.execute(create_table_cmd)
 
 def add_rating(db,name,stars)
@@ -30,29 +53,39 @@ def delete_rating(db, id)
 	db.execute("DELETE FROM ratings WHERE id=?", [id])
 end
 
+#this will determine when the loop ends. 
+inputloopbreak = false
+
 puts "Welcome to your Game review database."
 
-puts "What would you like to do with the database? Type: 'add', 'edit', or 'delete'..."
-action = gets.strip
+while inputloopbreak == false do
 
-if(action == "add")
-	puts "What is the games name?"
-	name = gets.chomp
-	puts "And how many stars would you give this game?"
-	stars = gets.chomp
-	add_rating(db, name, stars)
-elsif(action == 'edit')
-	puts 'Input the ID # of the rating you would like to edit'
-	id = gets.chomp
-	puts 'What is the updated rating?'
-	new_rating = gets.chomp
-	edit_rating(db, new_rating,id)
-elsif(action == 'delete')
-	puts 'Input the ID # of the rating you would like to delete'
-	id = gets.chomp
-	delete_rating(db,id)
-else
-	puts "That was not avalid input"
+	puts "What would you like to do with the database? Type: add, edit, or delete:"
+	puts "Press enter to cease entries"
+	action = gets.strip
+
+	if(action.downcase == "add")
+		puts "What is the games name?"
+		name = gets.chomp
+		puts "And how many stars would you give this game?"
+		stars = gets.chomp
+		add_rating(db, name, stars)
+	elsif(action.downcase == 'edit')
+		puts 'Input the ID # of the rating you would like to edit'
+		id = gets.chomp
+		puts 'What is the updated rating?'
+		new_rating = gets.chomp
+		edit_rating(db, new_rating,id)
+	elsif(action == 'delete')
+		puts 'Input the ID # of the rating you would like to delete'
+		id = gets.chomp
+		delete_rating(db,id)
+	elsif(action == "")
+		inputloopbreak = true
+		puts "thank you for using our database"
+	else
+		puts "That was not a valid input"
+	end
 end
 
 
