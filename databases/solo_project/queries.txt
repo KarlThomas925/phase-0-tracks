@@ -24,3 +24,5 @@ Red Panda|mixed
 DELETE FROM bears WHERE name="extinct";
 ***END RELEASE 2***
 ***RELEASE 3 ***
+ SELECT bears.name, colors.color FROM bears LEFT JOIN colors ON bears.name=colors.color;
+ none of the colors match the names obviously, so nothing returns on the right side. 
