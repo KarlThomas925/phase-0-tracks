@@ -11,5 +11,5 @@ function addBorder2(event) {
 var photo = document.getElementById("orange");
 photo.addEventListener("click", addBorder);
 
-var photo = document.getElementById("purple");
-photo.addEventListener("click", addBorder);
+var photo2 = document.getElementById("purple");
+photo2.addEventListener("click", addBorder);
