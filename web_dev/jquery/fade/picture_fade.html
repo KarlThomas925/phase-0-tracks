@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="fade">
+    	<img src="puppy.jpg" width="256px" height="256px" />
+		<script type="text/javascript">
+		$(document).ready(function () {
+		    $("#fade img").fadeTo(0, 0.5);
+		
+		    $("#fade img").hover(function () {
+		        $(this).fadeTo("slow", 1.0);
+		        },
+		        function () {$(this).fadeTo("slow", 0.5);
+		        }
+		    );
+		});
+		</script>
+	</div>
+</body>
+</html>
