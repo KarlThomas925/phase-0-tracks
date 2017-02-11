@@ -1,0 +1,82 @@
+blockquote {
+  border-left: 5px solid blue;
+  padding: 15px;
+  margin-left: 0px;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+}
+
+#external-links ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+/* you're welcome to edit the
+image, figure, and figcaption CSS if you'd like, 
+but it's optional! */
+img {
+  width: 100%;
+}
+
+figure {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: right;
+}
+body {
+  max-width: 960px;
+  background:;
+  
+}
+
+main {
+  width:78.75%;
+  display:inline-block;
+  vertical-align: text-top;
+  margin-left: 22%;
+
+}
+#external-links {
+  
+  width: 20.83333333%;
+  display:inline-block;
+  vertical-align: text-top;
+  position: fixed;
+  
+}
+/*@media screen and (max-width:500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+@media screen and (max-width:400px) {
+  body {
+    font-size: 50%;
+    
+  }
+}
+@media screen and (max-width:800px) {
+ #external-links {
+    background: #800080;
+    border:solid #FF0000;
+  }
+}
+@media screen and (max-width:700px) {
+ #external-links {
+    background: #00FFFF;
+    border: dashed #800080;
+  }
+}
+@media screen and (max-width:600px) {
+ #external-links {
+    background:#FF0000;
+    border:dotted solid double dashed #00FFFF;
+  }
+}
