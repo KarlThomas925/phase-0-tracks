@@ -55,7 +55,7 @@ get '/' do
   "Great job, #{params[:name]}!"
 end
 
-#super bonus round
+#3
 get '/add/:num1/:num2' do
   Addition = params[:num1].to_i + params[:num2].to_i
   "#{Addition}"
