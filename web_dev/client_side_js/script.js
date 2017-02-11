@@ -12,4 +12,4 @@ var photo = document.getElementById("orange");
 photo.addEventListener("click", addBorder);
 
 var photo2 = document.getElementById("purple");
-photo2.addEventListener("click", addBorder);
+photo2.addEventListener("click", addBorder2);
