@@ -5,7 +5,7 @@ require 'faker'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 
-db = SQLite3::Database.new("students.db")
+db = SQLite3::Database.new("floofers.db")
 db.results_as_hash = true
 
 create_table_cmd = <<-SQL
@@ -36,9 +36,13 @@ db.execute(create_table_cmd)
 #   redirect '/'
 # end
 
-# Given there was a mention of staff member bringing pets on campus.. 
+# Given there was a mention of staff members bringing pets on campus.. 
+def woofer(db, name, age)
+  db.execute("INSERT INTO floofers (name, breed) VALUES (?, ?)", [name, breed])
+end
+
 5.times do
-  create_pet(db, Faker::Name.name, 5)
+  woofer(db, Faker::Name.name, fa)
 end
 
 get '/' do
