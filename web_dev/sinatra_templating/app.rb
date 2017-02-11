@@ -42,7 +42,7 @@ def woofer(db, name, age)
 end
 
 5.times do
-  woofer(db, Faker::Name.name, fa)
+  woofer(db, Faker::Name.name, "THE FLUFFIEST KIND")
 end
 
 get '/' do
