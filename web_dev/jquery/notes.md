@@ -3,3 +3,4 @@ Look for online tutorials, prefereably video. Videos have helped me learn most i
 Im not really used to taking breaks. 
 
 # After
+videos did help
